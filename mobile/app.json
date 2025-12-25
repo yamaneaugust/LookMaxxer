@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "LookMaxxer",
+    "slug": "lookmaxxer",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#3b82f6"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lookmaxxer.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "LookMaxxer needs camera access to take photos of your meals for calorie tracking and progress photos.",
+        "NSPhotoLibraryUsageDescription": "LookMaxxer needs access to your photo library to save and retrieve progress photos."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#3b82f6"
+      },
+      "package": "com.lookmaxxer.app",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow LookMaxxer to access your camera for meal and progress photos."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow LookMaxxer to access your photos."
+        }
+      ]
+    ]
+  }
+}

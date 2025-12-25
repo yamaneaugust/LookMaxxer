@@ -13,7 +13,7 @@ A fitness app that helps users achieve their body goals through AI-powered food 
 
 ## Tech Stack
 
-- **Frontend:** React + Vite + TypeScript
+- **Mobile App:** React Native + Expo + TypeScript (iOS & Android)
 - **Backend:** Node.js + Express + TypeScript
 - **Database:** Supabase (PostgreSQL + Auth + Storage)
 - **AI:** Anthropic Claude API (Haiku model)
@@ -23,8 +23,15 @@ A fitness app that helps users achieve their body goals through AI-powered food 
 
 ```
 LookMaxxer/
-├── client/          # React frontend
-├── server/          # Express backend
+├── mobile/          # React Native app (iOS & Android)
+│   ├── src/
+│   │   ├── screens/      # App screens
+│   │   ├── navigation/   # Navigation setup
+│   │   ├── components/   # Reusable components
+│   │   ├── services/     # API services
+│   │   └── types/        # TypeScript types
+│   └── App.tsx
+├── server/          # Express backend API
 └── README.md
 ```
 
@@ -33,8 +40,10 @@ LookMaxxer/
 ### Prerequisites
 - Node.js 18+
 - npm or yarn
-- Anthropic API key
-- Supabase account (free)
+- Expo Go app on your phone (free from App Store/Google Play)
+- Mac computer (for iOS development)
+- Anthropic API key (get at console.anthropic.com)
+- Supabase account (free at supabase.com)
 
 ### Installation
 
@@ -46,8 +55,8 @@ cd LookMaxxer
 
 2. Install dependencies
 ```bash
-# Install client dependencies
-cd client
+# Install mobile app dependencies
+cd mobile
 npm install
 
 # Install server dependencies
@@ -55,18 +64,23 @@ cd ../server
 npm install
 ```
 
-3. Set up environment variables (see `.env.example` in client and server folders)
+3. Set up environment variables
+   - Copy `mobile/.env.example` to `mobile/.env`
+   - Copy `server/.env.example` to `server/.env`
+   - Add your Anthropic API key and Supabase credentials
 
-4. Run the development servers
+4. Run the app
 ```bash
-# Terminal 1 - Run backend
+# Terminal 1 - Run backend API
 cd server
 npm run dev
 
-# Terminal 2 - Run frontend
-cd client
-npm run dev
+# Terminal 2 - Run mobile app
+cd mobile
+npx expo start
 ```
+
+5. **Scan the QR code** with the Expo Go app on your phone to run the app!
 
 ## Budget-Friendly Architecture
 
