@@ -26,18 +26,18 @@ export default function LandingScreen({ navigation }: Props) {
           </View>
 
           <View style={styles.featureCard}>
-            <Text style={styles.featureIcon}>📊</Text>
-            <Text style={styles.featureTitle}>Track Progress</Text>
+            <Text style={styles.featureIcon}>🔍</Text>
+            <Text style={styles.featureTitle}>Face Scanner</Text>
             <Text style={styles.featureText}>
-              Monitor nutrition, weight, and body measurements
+              PSL analysis, acne detection, and personalized skincare tips
             </Text>
           </View>
 
           <View style={styles.featureCard}>
-            <Text style={styles.featureIcon}>🤖</Text>
-            <Text style={styles.featureTitle}>AI Insights</Text>
+            <Text style={styles.featureIcon}>📊</Text>
+            <Text style={styles.featureTitle}>Track Progress</Text>
             <Text style={styles.featureText}>
-              Get personalized feedback on your transformation
+              Monitor nutrition, weight, and body transformation
             </Text>
           </View>
         </View>
@@ -52,7 +52,7 @@ export default function LandingScreen({ navigation }: Props) {
 
           <TouchableOpacity
             style={styles.secondaryButton}
-            onPress={() => navigation.navigate('Dashboard')}
+            onPress={() => navigation.navigate('MainTabs')}
           >
             <Text style={styles.secondaryButtonText}>Sign In</Text>
           </TouchableOpacity>
@@ -65,7 +65,7 @@ export default function LandingScreen({ navigation }: Props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#3b82f6',
+    backgroundColor: '#ffffff',
   },
   content: {
     flex: 1,
@@ -79,22 +79,23 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 48,
     fontWeight: 'bold',
-    color: '#ffffff',
+    color: '#000000',
     marginBottom: 10,
   },
   subtitle: {
     fontSize: 20,
-    color: '#dbeafe',
+    color: '#6b7280',
     marginBottom: 20,
   },
   features: {
     gap: 15,
   },
   featureCard: {
-    backgroundColor: 'rgba(255, 255, 255, 0.15)',
+    backgroundColor: '#f9fafb',
     padding: 20,
     borderRadius: 15,
-    backdropFilter: 'blur(10px)',
+    borderWidth: 1,
+    borderColor: '#e5e7eb',
   },
   featureIcon: {
     fontSize: 32,
@@ -103,12 +104,12 @@ const styles = StyleSheet.create({
   featureTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#ffffff',
+    color: '#000000',
     marginBottom: 8,
   },
   featureText: {
     fontSize: 14,
-    color: '#dbeafe',
+    color: '#6b7280',
     lineHeight: 20,
   },
   buttons: {
@@ -116,13 +117,13 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   primaryButton: {
-    backgroundColor: '#ffffff',
+    backgroundColor: '#000000',
     paddingVertical: 16,
     borderRadius: 12,
     alignItems: 'center',
   },
   primaryButtonText: {
-    color: '#3b82f6',
+    color: '#ffffff',
     fontSize: 18,
     fontWeight: 'bold',
   },
@@ -132,10 +133,10 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     alignItems: 'center',
     borderWidth: 2,
-    borderColor: '#ffffff',
+    borderColor: '#000000',
   },
   secondaryButtonText: {
-    color: '#ffffff',
+    color: '#000000',
     fontSize: 18,
     fontWeight: 'bold',
   },

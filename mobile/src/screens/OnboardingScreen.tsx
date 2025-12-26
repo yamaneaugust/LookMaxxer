@@ -30,8 +30,8 @@ export default function OnboardingScreen({ navigation }: Props) {
     if (step < 3) {
       setStep(step + 1);
     } else {
-      // Save data and navigate to dashboard
-      navigation.navigate('Dashboard');
+      // Save data and navigate to subscription
+      navigation.navigate('Subscription');
     }
   };
 
