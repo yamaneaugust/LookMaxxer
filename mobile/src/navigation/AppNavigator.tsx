@@ -8,7 +8,7 @@ import { Ionicons } from '@expo/vector-icons';
 import LandingScreen from '../screens/LandingScreen';
 import OnboardingScreen from '../screens/OnboardingScreen';
 import SubscriptionScreen from '../screens/SubscriptionScreen';
-import DashboardScreen from '../screens/DashboardScreen';
+import WeeklyProgressScreen from '../screens/WeeklyProgressScreen';
 import FoodLogScreen from '../screens/FoodLogScreen';
 import CameraScreen from '../screens/CameraScreen';
 import ProgressScreen from '../screens/ProgressScreen';
@@ -61,7 +61,7 @@ function MainTabs() {
     >
       <Tab.Screen
         name="Dashboard"
-        component={DashboardScreen}
+        component={WeeklyProgressScreen}
         options={{
           title: 'Home',
           tabBarIcon: ({ color, size }) => (
