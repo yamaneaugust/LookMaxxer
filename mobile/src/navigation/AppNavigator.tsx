@@ -27,7 +27,6 @@ export type TabParamList = {
   FoodLog: undefined;
   FaceScanner: undefined;
   Progress: undefined;
-  Profile: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
