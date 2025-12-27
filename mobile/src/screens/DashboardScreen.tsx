@@ -5,8 +5,8 @@ import {
   StyleSheet,
   TouchableOpacity,
   ScrollView,
-  SafeAreaView,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/AppNavigator';
 
@@ -95,7 +95,7 @@ export default function DashboardScreen({ navigation }: Props) {
             <View style={styles.statDivider} />
             <View style={styles.statItem}>
               <Text style={styles.statLabel}>To Go</Text>
-              <Text style={[styles.statValue, { color: '#3b82f6' }]}>
+              <Text style={[styles.statValue, { color: '#000000' }]}>
                 {currentWeight - goalWeight} kg
               </Text>
             </View>
@@ -117,7 +117,7 @@ export default function DashboardScreen({ navigation }: Props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f9fafb',
+    backgroundColor: '#ffffff',
   },
   scrollContent: {
     padding: 16,
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
   calorieNumber: {
     fontSize: 36,
     fontWeight: 'bold',
-    color: '#3b82f6',
+    color: '#000000',
   },
   calorieGoal: {
     fontSize: 18,
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
   },
   progressFill: {
     height: '100%',
-    backgroundColor: '#3b82f6',
+    backgroundColor: '#000000',
     borderRadius: 4,
   },
   caloriesRemaining: {
