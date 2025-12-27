@@ -19,7 +19,6 @@ export default function LandingScreen({ navigation }: Props) {
 
         <View style={styles.features}>
           <View style={styles.featureCard}>
-            <Text style={styles.featureIcon}>📸</Text>
             <Text style={styles.featureTitle}>AI Food Recognition</Text>
             <Text style={styles.featureText}>
               Snap a photo of your meal for instant calorie tracking
@@ -27,7 +26,6 @@ export default function LandingScreen({ navigation }: Props) {
           </View>
 
           <View style={styles.featureCard}>
-            <Text style={styles.featureIcon}>🔍</Text>
             <Text style={styles.featureTitle}>Face Scanner</Text>
             <Text style={styles.featureText}>
               PSL analysis, acne detection, and personalized skincare tips
@@ -35,7 +33,6 @@ export default function LandingScreen({ navigation }: Props) {
           </View>
 
           <View style={styles.featureCard}>
-            <Text style={styles.featureIcon}>📊</Text>
             <Text style={styles.featureTitle}>Track Progress</Text>
             <Text style={styles.featureText}>
               Monitor nutrition, weight, and body transformation
@@ -97,10 +94,6 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     borderWidth: 1,
     borderColor: '#e5e7eb',
-  },
-  featureIcon: {
-    fontSize: 32,
-    marginBottom: 10,
   },
   featureTitle: {
     fontSize: 18,

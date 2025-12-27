@@ -86,9 +86,6 @@ export default function WeeklyProgressScreen() {
           {/* Stats Row */}
           <View style={styles.statsRow}>
             <View style={styles.statItem}>
-              <View style={styles.statIconContainer}>
-                <Text style={styles.statIcon}>🔥</Text>
-              </View>
               <View>
                 <Text style={styles.statNumber}>{weeklyStats.caloriesBurned}</Text>
                 <Text style={styles.statLabel}>Calories burned</Text>
@@ -96,9 +93,6 @@ export default function WeeklyProgressScreen() {
             </View>
 
             <View style={styles.statItem}>
-              <View style={styles.statIconContainer}>
-                <Text style={styles.statIcon}>⚖️</Text>
-              </View>
               <View>
                 <Text style={styles.statNumber}>{weeklyStats.weight}kg</Text>
                 <Text style={styles.statLabel}>
@@ -109,9 +103,6 @@ export default function WeeklyProgressScreen() {
             </View>
 
             <View style={styles.statItem}>
-              <View style={styles.statIconContainer}>
-                <Text style={styles.statIcon}>📸</Text>
-              </View>
               <View>
                 <Text style={styles.statNumber}>{weeklyStats.photosUploaded}</Text>
                 <Text style={styles.statLabel}>Photos</Text>
@@ -126,25 +117,20 @@ export default function WeeklyProgressScreen() {
 
           {recentMeals.map((meal, index) => (
             <View key={index} style={styles.mealCard}>
-              <View style={styles.mealImagePlaceholder}>
-                <Text style={styles.mealImageIcon}>
-                  {meal.type === 'exercise' ? '💪' : '🍽️'}
-                </Text>
-              </View>
               <View style={styles.mealInfo}>
                 <Text style={styles.mealName}>{meal.name}</Text>
                 <View style={styles.mealStats}>
-                  <Text style={styles.mealCalories}>🔥 {meal.calories} calories</Text>
+                  <Text style={styles.mealCalories}>{meal.calories} calories</Text>
                   {meal.macros && (
                     <View style={styles.macrosRow}>
-                      <Text style={styles.macroText}>🥩 {meal.macros.protein}g</Text>
-                      <Text style={styles.macroText}>🍞 {meal.macros.carbs}g</Text>
-                      <Text style={styles.macroText}>🥑 {meal.macros.fat}g</Text>
+                      <Text style={styles.macroText}>P: {meal.macros.protein}g</Text>
+                      <Text style={styles.macroText}>C: {meal.macros.carbs}g</Text>
+                      <Text style={styles.macroText}>F: {meal.macros.fat}g</Text>
                     </View>
                   )}
                   {meal.type === 'exercise' && (
                     <Text style={styles.exerciseLabel}>
-                      ⚡ Intensity: Medium • ⏱️ 15 Mins
+                      Intensity: Medium • 15 Mins
                     </Text>
                   )}
                 </View>
@@ -295,17 +281,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 8,
   },
-  statIconContainer: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
-    backgroundColor: '#ffffff',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  statIcon: {
-    fontSize: 16,
-  },
   statNumber: {
     fontSize: 14,
     fontWeight: 'bold',
@@ -332,18 +307,6 @@ const styles = StyleSheet.create({
     padding: 12,
     marginBottom: 12,
     alignItems: 'center',
-  },
-  mealImagePlaceholder: {
-    width: 50,
-    height: 50,
-    borderRadius: 8,
-    backgroundColor: '#e5e7eb',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginRight: 12,
-  },
-  mealImageIcon: {
-    fontSize: 24,
   },
   mealInfo: {
     flex: 1,
