@@ -13,6 +13,7 @@ import FoodLogScreen from '../screens/FoodLogScreen';
 import CameraScreen from '../screens/CameraScreen';
 import ProgressScreen from '../screens/ProgressScreen';
 import FaceScannerScreen from '../screens/FaceScannerScreen';
+import WorkoutPlanScreen from '../screens/WorkoutPlanScreen';
 
 export type RootStackParamList = {
   Landing: undefined;
@@ -25,6 +26,7 @@ export type RootStackParamList = {
 export type TabParamList = {
   Dashboard: undefined;
   FoodLog: undefined;
+  Workout: undefined;
   FaceScanner: undefined;
   Progress: undefined;
 };
@@ -76,6 +78,16 @@ function MainTabs() {
           title: 'Meals',
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="restaurant" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Workout"
+        component={WorkoutPlanScreen}
+        options={{
+          title: 'Workout',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="fitness" size={size} color={color} />
           ),
         }}
       />
